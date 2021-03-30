@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorlightGreen"
+    tools:context=".AccountApplication">
+
+    <TextView
+        android:id="@+id/txt_judul"
+        android:layout_width="267dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="72dp"
+        android:layout_marginRight="72dp"
+        android:layout_marginBottom="8dp"
+        android:text="Form Registrasi"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimaryDark"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/txt_nama"
+        android:layout_width="368dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="116dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginBottom="8dp"
+        android:ems="10"
+        android:hint=" Nama Lengkap :"
+        android:inputType="textPersonName"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/txt_password"
+        android:layout_width="367dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="216dp"
+        android:layout_marginBottom="8dp"
+        android:ems="10"
+        android:hint=" Password :"
+        android:inputType="textPassword"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/txt_email"
+        app:layout_constraintStart_toStartOf="@+id/txt_email"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.032" />
+
+    <TextView
+        android:id="@+id/txt_jk"
+        android:layout_width="127dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:text="Jenis Kelamin :"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@+id/radioGroupJenisKelamin"
+        app:layout_constraintHorizontal_bias="0.7"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_password" />
+
+    <EditText
+        android:id="@+id/txt_address"
+        android:layout_width="362dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:ems="10"
+        android:hint="Alamat :"
+        android:inputType="textMultiLine"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/btn_setDate"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/txt_tglLahir"
+        app:layout_constraintTop_toBottomOf="@+id/txt_tglLahir" />
+
+    <EditText
+        android:id="@+id/txt_email"
+        android:layout_width="368dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="17dp"
+        android:layout_marginBottom="8dp"
+        android:ems="10"
+        android:hint="Email :"
+        android:inputType="textEmailAddress"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/txt_password"
+        app:layout_constraintEnd_toEndOf="@+id/txt_nama"
+        app:layout_constraintStart_toStartOf="@+id/txt_nama"
+        app:layout_constraintTop_toBottomOf="@+id/txt_nama"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <RadioGroup
+        android:id="@+id/radioGroupJenisKelamin"
+        android:layout_width="231dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:checked="true"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/txt_tempatLahir"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_password">
+
+        <RadioButton
+            android:id="@+id/radioButtonCowo"
+            android:layout_width="154dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:text="Laki - laki"
+            android:textSize="15sp" />
+
+        <RadioButton
+            android:id="@+id/radioButtonCewe"
+            android:layout_width="176dp"
+            android:layout_height="42dp"
+            android:layout_weight="1"
+            android:text="Perempuan"
+            android:textSize="14sp" />
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/txt_tempatLahir"
+        android:layout_width="367dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:ems="10"
+        android:hint=" Tempat Lahir :"
+        android:inputType="textPersonName"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.125"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_jk" />
+
+    <EditText
+        android:id="@+id/txt_tglLahir"
+        android:layout_width="249dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="Tanggal Lahir :"
+        android:inputType="date"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_tempatLahir" />
+
+    <Button
+        android:id="@+id/btn_lanjut"
+        android:layout_width="137dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginBottom="8dp"
+        android:background="@color/colorPrimary"
+        android:onClick="sendExtrasBundle"
+        android:text="lanjut"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/txt_address"
+        app:layout_constraintStart_toStartOf="@+id/txt_address"
+        app:layout_constraintTop_toBottomOf="@+id/txt_address"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/btn_setDate"
+        android:layout_width="103dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="8dp"
+        android:background="@color/colorAccent"
+        android:onClick="setDate"
+        android:text="set date"
+        app:layout_constraintBottom_toTopOf="@+id/txt_address"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.466"
+        app:layout_constraintStart_toEndOf="@+id/txt_tglLahir"
+        app:layout_constraintTop_toBottomOf="@+id/txt_tempatLahir"
+        app:layout_constraintVertical_bias="0.0" />
+
+</android.support.constraint.ConstraintLayout>
